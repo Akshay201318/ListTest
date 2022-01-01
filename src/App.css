@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+.header{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+  height: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.listHeader{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.listRow{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.listRow:hover{
+  background-color: #c0c0c0;
+}
+
+.listTitle{
+  height: 20px;
+  padding-left: 50px;
+  padding-bottom: 5px;
+}
+
+.list{
+  margin-top: 50px;
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.listBody{
+  height: 390px;
+  overflow: auto;
+}
+.listBody a{
+ color: black;
+ cursor: pointer;
+ text-decoration: none;
+}
+.main{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-height: 100vh;
+}
+
+.button{
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
+}
+
+.button div{
+  padding: 20px;
+  color: blue;
+  cursor: pointer;
+}
+
+.productDetails{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: center;
+  align-items: center;
+  margin-top: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.item{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.key{
+  width: 100px;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.value{
+  width: 250px;
+  align-items: center;
+  color: blue;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.details a{
+  cursor: pointer;
+ text-decoration: none;
+}
+
+.detailsHeader{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+  height: 50px;
 }
