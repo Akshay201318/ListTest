@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
     useEffect(()=>{
         getListData(20);
-    },[]);
+    });
 
     useEffect(()=>{
         const nextPage = buttonClicked === 'prev' ? listData.page -1 : listData.page+1;
