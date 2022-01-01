@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
  const List = ()=> {
-    const [listData, setListData] = useState({results: [], page: 0, totalResults: 0});
+    const [listData, setListData] = useState({results: [], page: 0, totalResults: 0, totalPages: 0});
     const [buttonClicked, setButtonClicked] = useState("");
     const [count, setCount] = useState(0);
 
@@ -51,8 +51,8 @@ import { Link } from 'react-router-dom';
                 </div>
             </div>
             <div className = "button">
-                <div onClick = {()=> {setButtonClicked('prev'); setCount(count-1)}}>{"<<Prev"}</div>
-                <div onClick = {()=> {setButtonClicked('next'); setCount(count+1)}}>{"Next>>"}</div>
+                {listData && listData.page && listData.page > 1 && <div onClick = {()=> {setButtonClicked('prev'); setCount(count-1)}}>{"<<Prev"}</div>}
+                {listData && listData.page && listData.totalPages && listData.page < listData.totalPages && <div onClick = {()=> {setButtonClicked('next'); setCount(count+1)}}>{"Next>>"}</div>}
             </div>
         </div>
     )
