@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
     const [count, setCount] = useState(0);
 
     const getListData= async (limit, page)=>{ 
-        const {data}= await axios.post('http://localhost:5000/product/getAllProducts', {limit:limit, page: page});
+        const {data}= await axios.post('https://mayihelpu.herokuapp.com/product/getAllProducts', {limit:limit, page: page});
         setListData(data);
     }
 
@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
     },[]);
 
     useEffect(()=>{
-        const nextPage = buttonClicked == 'prev' ? listData.page -1 : listData.page+1;
+        const nextPage = buttonClicked === 'prev' ? listData.page -1 : listData.page+1;
         getListData(20, nextPage);
     },[count]);
 

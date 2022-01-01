@@ -7,12 +7,12 @@ const ProductDetails = ()=> {
     const [data, setData] = useState({});
 
     const getProductDetails= async (id)=>{ 
-        const {data}= await axios.post('http://localhost:5000/product/getProduct', {id: id});
+        const {data}= await axios.post('https://mayihelpu.herokuapp.com/product/getProduct', {id: id});
         setData(data);
     }
     useEffect(()=>{
         getProductDetails(id);
-    },[])
+    })
     return (
         <div className = "details">
             <Link to={`/`}><div className = "detailsHeader"> {"<<Back"} </div></Link>

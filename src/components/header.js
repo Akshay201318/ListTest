@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Header = ({count, setCount, evenOrOddCount })=> {
+const Header = ()=> {
     return (
         <div className = "header">
            <div>List Example</div>
