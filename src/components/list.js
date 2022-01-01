@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
     useEffect(()=>{
         const nextPage = buttonClicked === 'prev' ? listData.page -1 : listData.page+1;
         getListData(20, nextPage);
-    },[count]);
+    },[count, buttonClicked, listData.page]);
 
 
     return (
